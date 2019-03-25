@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.spanone{
+    position: absolute ;
+    display: block;
+    font-size: 20px;
+    right: -25px;
+}
+.spanones{
+    position: absolute ;
+    display: block;
+    font-size: 20px;
+    right: -25px;
+    top: 50px;
+}

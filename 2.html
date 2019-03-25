@@ -61,13 +61,69 @@
         })
 
 
-        $(window).on("scroll",function(){
-            if($(".move_one").offset().top-$(window).scrollTop() < 0){
-               $(".dong").css("top","0")
-            }else{
-                $(".dong").css("top",".27rem")
-            }
-        })
+        // $(window).on("scroll",function(){
+        //     if($(".move_one").offset().top-$(window).scrollTop() < 0){
+        //        $(".dong").css("top","0")
+        //     }else{
+        //         $(".dong").css("top","0.1rem")
+        //     }
+        // })
+
+
+
+        //弹幕
+        var arr=[1,2,3,4,"wsnd",6,"gkd",8,"gck",10,11,12,"nmsl",14,666,16,"wnsm",18,19,20]
+        var arrs=[1,6666666666666666666,3,4,5,6,7,8,9,2]
+        var arrss=['red','black','yellow','blue','green','#666']
+        var time  = null
+        var times  = null
+        var zed = 0;
+        var trait = $('.trait')
+        var boxwidth=trait.width()
+        clearInterval(time)
+    function uzi(){
+        time=setInterval(function(){
+     var math = Math.floor(Math.random()*20)   
+     var dom = arr[math] 
+    
+    var div= box.append("<span></span>")
+    var span=box.find('span').addClass('spanone')
+    var txt = span.text(dom)
+
+    var math1 = Math.floor(Math.random()*6)
+        var colorss = arrss[math1]
+        console.log(colorss)
+        span.css('color',colorss)
+
+    var arrheight=Math.floor(Math.random()*10)*Math.floor(Math.random()*7)  
+    span.css({top:arrheight+"px"})  
+      
+    span.animate({left:-boxwidth+"px"},5000) 
+
+    },3000) 
+    }
+        
+    uzi()
+
+    clearInterval(times)
+    function uu(){
+        times=setInterval(function(){
+     var maths = Math.floor(Math.random()*10)   
+     var doms = arrs[maths] 
+
+    var divs= box.append("<a></a>")
+    var spans=box.find('a').addClass('spanones')
+    var txts = spans.text(doms)
+
+    var arrheight=Math.floor(Math.random()*10)*Math.floor(Math.random()*20)  
+    spans.css({top:arrheight+"px"})  
+      
+    spans.animate({left:-boxwidth+"px"},5000) 
+
+    },7000) 
+    }
+        
+    uu()
     })
     
     
@@ -86,7 +142,13 @@
                 <img src="./img/images/images/fangdajing_03.png" alt="" class="img_three">
            </div> 
         </div>
-    </div>
+    </div> 
+    <div class="mlxg dong">
+            <div class="wrap btn">
+                <button>搜索饿了么商家、商品名称</button>
+                <img src="./img/images/images/fangdajing_03.png" alt="" class="img_three">
+           </div> 
+        </div>
     <div class="bbox_one">
                 <div class="wrap_z">
                     <ul class="sw flex">

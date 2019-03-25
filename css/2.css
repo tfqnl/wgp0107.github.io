@@ -23,10 +23,10 @@ a{
 }
 .top{
     width: 100%;
-    height: 0.8rem;
+    height: 0.36rem;
     background: linear-gradient(to right,#0ca9fd,#0f87fd);
     overflow: hidden;
-    position: relative;
+    /* position: relative; */
 }
 .flex{
     display: flex;
@@ -124,8 +124,7 @@ a{
     height: 0.40rem;
 }
 .texts{
-    width: 100%;
-    height: auto;
+    width: 2.9rem;
     list-style: none;
     /* justify-content: space-between; */
     font-size: 0.12rem;
@@ -154,6 +153,7 @@ a{
     overflow: hidden;
     margin-top: 0.05rem;
     border-radius: 0.02rem;
+    position: relative;
 }
 .txt{
     margin-left: 0.1rem;
@@ -500,17 +500,17 @@ a{
     width: 100%;
     height: 0.5rem;;
 }
-.dong{
-    width: 100%;
+.dong{ 
+    position:sticky;
+    top:0;
+    width:100%;
     height: 0.42rem;
     background: linear-gradient(to right,#0ca9fd,#0f87fd);
-    margin-top: 0.055rem;
-    position:fixed;
-    z-index: 666;
-    /* top: 0.5rem;
-    left: 0;
+    /* margin-top: 0.055rem; */
+   
+    /* left: 0;
     right: 0; */
-    
+      z-index: 666;
 }
 .bbox_two{
     width: 100%;
@@ -529,4 +529,17 @@ a{
 }
 .xxbtn{
      justify-content: center;
+}
+.spanone{
+    position: absolute ;
+    display: block;
+    font-size: 0.14rem;
+    right: -0.25rem;
+}
+.spanones{
+    position: absolute ;
+    display: block;
+    font-size:0.14rem;
+    right:-0.25rem;
+    top: 0.5rem;
 }

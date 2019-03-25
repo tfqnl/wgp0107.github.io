@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/2.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <title>Document</title>
     <script>
     (function(doc, win) {
@@ -57,7 +57,16 @@
         btn2.click(function(){
             bbox2.css('display','block')
             bbox1.css('display','none')
-            console.log( bbox1.css('display,none'))
+            // console.log( bbox1.css('display,none'))
+        })
+
+
+        $(window).on("scroll",function(){
+            if($(".move_one").offset().top-$(window).scrollTop() < 0){
+               $(".dong").css("top","0")
+            }else{
+                $(".dong").css("top",".27rem")
+            }
         })
     })
     
@@ -346,5 +355,6 @@
                                 </div>
                     
                 </div>
+
 </body>
 </html>

@@ -124,7 +124,7 @@ a{
     height: 0.40rem;
 }
 .texts{
-    width: 3.1rem;
+    width: 100%;
     height: auto;
     list-style: none;
     /* justify-content: space-between; */
@@ -159,11 +159,6 @@ a{
     margin-left: 0.1rem;
     margin-top: 0.10rem;
     
-}
-
-.texts li a{
-    font-size: 0.12rem;
-
 }
 .txt div:nth-child(1){
     font-size: 0.15rem;
@@ -485,8 +480,8 @@ a{
     background:#fff;
     position: fixed;
     bottom: 0;
-    border-top: 0.01rem solid #f3f3f3;
-    border-bottom: 0.01rem solid #f3f3f3;
+    border-top: 1px solid #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
     /* line-height: rem; */
     justify-content: space-around
 }
@@ -503,7 +498,7 @@ a{
 }
 .mlxg{
     width: 100%;
-    height: 0.5rem;
+    height: 0.5rem;;
 }
 .dong{
     width: 100%;

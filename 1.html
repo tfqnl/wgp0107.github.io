@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/1.css">
+    <title>Document</title>
+    <script>
+    $(document).ready(function(){
+
+      $("input").click(function(){
+        $("input").css("borderColor","#e4e4e4")
+        $(this).css("borderColor","#0a89da")
+      })
+      $("button").click(function(){
+        $(".sj").css("display","block").fadeOut(5000)
+        $("input").eq(0).css("borderColor","#0a89da")
+        
+        
+      })
+
+
+    })
+    </script>
+    <script>
+    (function(doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function() {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 100 * (clientWidth / 320) + 'px';
+    };
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+    </script>
+</head>
+<body>
+  <div class="big">
+      <div class="sj">请填写手机号</div>
+    <div class="wrap top">
+        <img src="./img/images/erweima_03_03.png" alt="" class="img_one">
+    </div>
+    <form action="#">
+      <input type="text" placeholder="手机号">
+      <input type="text" placeholder="验证码">
+      <span>获取验证码</span>
+    </form>
+    <div class="texts"><span>新用户登录即自动注册 , 并表示已同意</span><a href="#"> 《用户服务协议》</a></div>
+    <button type="button">登录</button>
+    <div class="gy"><a href="./2.html">关于我们</a></div>
+  </div>
+  </body>
+</html>

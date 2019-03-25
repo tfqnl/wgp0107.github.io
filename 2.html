@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/2.css">
+    <title>Document</title>
+    <script>
+    (function(doc, win) {
+  var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function() {
+      var clientWidth = docEl.clientWidth;
+      if (!clientWidth) return;
+      docEl.style.fontSize = 100 * (clientWidth / 320) + 'px';
+    };
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+    </script>
+
+    <script>
+    $(document).ready(function(){
+        var box = $(".lunbo")
+        var ul = box.find(".po")
+        var li = ul.find('li')
+        var liwidth=li.eq(0).width()
+        var time=null
+        var zed=0
+        function aa(){
+            time=setInterval(function(){
+                zed++
+                var disX = $(window).width()
+                ul.animate({"marginLeft":-disX*zed+"px"},500,function(){
+                    if(zed==3){
+                        zed=0
+                        ul.css("marginLeft","0px")
+                    }
+                })
+            },2000)
+        }
+        aa()//轮播图
+
+        var xxbtn=$('.xxbtn')
+        var btn1=xxbtn.find('button').eq(0)
+        var btn2=xxbtn.find('button').eq(1)
+        var bbox1=$('.bbox_one')
+        var bbox2=$('.bbox_two')
+        console.log(bbox1)
+        btn1.click(function(){
+            bbox1.css('display','block')
+            bbox2.css('display','none')
+        })
+        btn2.click(function(){
+            bbox2.css('display','block')
+            bbox1.css('display','none')
+            console.log( bbox1.css('display,none'))
+        })
+    })
+    
+    
+    </script>
+</head>
+<body>
+    <div class="top">
+        <div class="wrap move_one flex">
+            <img src="./img/images/images/dingwei_03.png" alt="" class="img_one">
+            <span>杭州市下城区...</span>
+            <img src="./img/images/images/sjx_03.png" alt="" class="img_two">
+        </div>
+        <div class="mlxg dong">
+            <div class="wrap btn">
+                <button>搜索饿了么商家、商品名称</button>
+                <img src="./img/images/images/fangdajing_03.png" alt="" class="img_three">
+           </div> 
+        </div>
+    </div>
+    <div class="bbox_one">
+                <div class="wrap_z">
+                    <ul class="sw flex">
+                        <li><img src="https://fuss10.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                        <li><img src="https://fuss10.elemecdn.com/c/7e/76a23eb90dada42528bc41499d6f8jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                        <li><img src="https://fuss10.elemecdn.com/0/d0/dd7c960f08cdc756b1d3ad54978fdjpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                        <li><img src="https://fuss10.elemecdn.com/7/0a/af108e256ebc9f02db599592ae655jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                        <li><img src="https://fuss10.elemecdn.com/3/01/c888acb2c8ba9e0c813f36ec9e90ajpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                    </ul> 
+                </div>
+                <div class="wrap">
+                    <ul class="texts flex">
+                        <li><a href="#">美食</a></li>
+                        <li><a href="#">商超便利</a></li>
+                        <li><a href="#">水果</a></li>
+                        <li><a href="#">医药健康</a></li>
+                        <li><a href="#">浪漫鲜花</a></li>
+                    </ul>
+            </div>
+            <div class="wrap_z">
+                    <ul class="sw flex">
+                        <li><img src="https://fuss10.elemecdn.com/e/89/185f7259ebda19e16123884a60ef2jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                        <li><img src="https://fuss10.elemecdn.com/e/58/bceb19258e3264e64fb856722c3c1jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                        <li><img src="https://fuss10.elemecdn.com/b/7f/432619fb21a40b05cd25d11eca02djpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                        <li><img src="https://fuss10.elemecdn.com/c/21/e42997b86b232161a5a16ab813ae8jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                        <li><img src="https://fuss10.elemecdn.com/a/78/0fb469b2da210827ec16896e00420jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                    </ul> 
+                </div>
+                <div class="wrap">
+                        <ul class="texts flex">
+                            <li><a href="#">晚餐</a></li>
+                            <li><a href="#">跑腿代购</a></li>
+                            <li><a href="#">汉堡</a></li>
+                            <li><a href="#">厨房生菜</a></li>
+                            <li><a href="#">炸鸡炸串</a></li>
+                        </ul>
+                </div>
+            </div>
+
+          
+            <div class="bbox_two">
+                    <div class="wrap_z">
+                        <ul class="sw flex">
+                            <li><img src="https://fuss10.elemecdn.com/a/8a/ec21096d528b7cfd23cdd894f01c6jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                            <li><img src="https://fuss10.elemecdn.com/e/c7/b7ba9547aa700bd20d0420e1794a8jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                            <li><img src="https://fuss10.elemecdn.com/0/1a/314b6da88ab6c7ae9828f91652d40jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                            <li><img src="https://fuss10.elemecdn.com/7/d6/6f2631288a44ec177204e05cbcb93jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                            <li><img src="https://fuss10.elemecdn.com/a/7b/b02bd836411c016935d258b300cfejpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                        </ul> 
+                    </div>
+                    <div class="wrap">
+                        <ul class="texts flex">
+                            <li><a href="#">美食</a></li>
+                            <li><a href="#">商超便利</a></li>
+                            <li><a href="#">水果</a></li>
+                            <li><a href="#">医药健康</a></li>
+                            <li><a href="#">浪漫鲜花</a></li>
+                        </ul>
+                </div>
+                <div class="wrap_z">
+                        <ul class="sws flex">
+                            <li><img src="https://fuss10.elemecdn.com/e/89/185f7259ebda19e16123884a60ef2jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                            <li><img src="https://fuss10.elemecdn.com/5/1a/dc885d2ce022d2ee60495acafb795jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                            <li><img src="https://fuss10.elemecdn.com/d/38/7bddb07503aea4b711236348e2632jpeg.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/" alt=""></li>
+                           
+                        </ul> 
+                    </div>
+                    <div class="wrap">
+                            <ul class="texts flex">
+                                <li><a href="#">晚餐</a></li>
+                                <li><a href="#">跑腿代购</a></li>
+                                <li><a href="#">汉堡</a></li>
+                             
+                            </ul>
+                    </div>
+                </div>
+                <div class="xxbtn flex">
+                        <button type="button"></button>
+                        <button type="button"></button>
+                    </div>
+
+
+       <div class="trait flex">
+           <div class="txt">
+                <div><a href="#">品质套餐</a></div>
+                <div><a href="#">搭配齐全吃的好</a></div>
+                <div><a href="#">立即抢购></a></div>
+           </div>
+           <img src="https://fuss10.elemecdn.com/e/ee/df43e7e53f6e1346c3fda0609f1d3png.png?imageMogr/format/webp/thumbnail/!282x188r/gravity/Center/crop/282x188/" alt="">
+       </div>
+       <div class="member flex">
+            <img src="https://fuss10.elemecdn.com/8/0e/4dd212d831becab6e3ebd484c0941jpeg.jpeg?imageMogr/format/webp/thumbnail/34x/" alt="">
+            <div class="cjhy"><a href="#">超级会员</a></div>
+            <div class="dian">·</div>
+           <a href="#" class="cjhy1">已过期1天</a>
+           
+           <a href="#"class="cjhy2">立即续费></a>
+        </div>
+        <div class="lunbo ">
+            <div class="zige"><a href="#">资质证件</a></div>
+            <ul class="po flex">
+                <li><img src="https://fuss10.elemecdn.com/1/9c/d8da44b63fa1208476992df88edc9jpeg.jpeg?imageMogr/format/webp/thumbnail/568x/" alt=""></li>
+                <li><img src="https://fuss10.elemecdn.com/4/48/37fce9a4ffbec79293357f68ecfcbjpeg.jpeg?imageMogr/format/webp/thumbnail/568x/" alt="" ></li>
+                <li><img src="https://fuss10.elemecdn.com/f/09/0eb269c8f353d5b1d707b77065e9cjpeg.jpeg?imageMogr/format/webp/thumbnail/568x/" alt=""></li>
+                <li> <img src="https://fuss10.elemecdn.com/1/9c/d8da44b63fa1208476992df88edc9jpeg.jpeg?imageMogr/format/webp/thumbnail/568x/" alt=""></li>
+            </ul>
+        </div>
+        <div class="tj flex">
+            
+                <span></span>
+                <a href="#">推荐商家</a>
+                <span></span>
+            
+        </div>
+        <div class="com">
+            <div class="xiaohu flex">
+                <div class="let">
+                    <a href="#">综合排序</a>
+                    <img src="./img/images/images/images/sjx_03_03.png" alt="">
+                </div>
+                <a href="#">距离最近</a>
+                <a href="#">品质联盟</a>
+                <div class="redbuff flex">
+                    <a href="#">筛选</a>
+                    <img src="./img/images/images/images/saixuan_03.png" alt="">
+                </div>
+                
+            </div>
+        </div>
+        <div class="big_box">
+        <div class=" commo flex">
+            <img src="https://fuss10.elemecdn.com/c/ab/81564a6d806cbc7c61878b19e17cejpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/" alt="">
+            <div class="center">
+                <div class="center_one">
+                    <img src="./img/images/images/images/pingpai_03.png" alt="">
+                    <a href="#">1点点</a>
+                    <a href="#">( 石祥新天地店 )</a>
+                    <span>···</span>
+                </div>
+                <div class="center_two">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSIwJSIgeTE9IjUwJSIgeTI9IjUwJSIgaWQ9ImEiPjxzdG9wIHN0b3AtY29sb3I9IiNGRkRFMDAiIG9mZnNldD0iMCUiLz48c3RvcCBzdG9wLWNvbG9yPSIjRkZCMDAwIiBvZmZzZXQ9IjEwMCUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJNNTQuMDE3IDguMDcybC0yLjU1MiAxLjU2MWMtLjQ3Ni4yOTEtLjc1OC4wOTYtLjYyNi0uNDU1bC42OTYtMi45MDktMi4yNzMtMS45NDRjLS40MjQtLjM2Mi0uMzI1LS42OTEuMjM5LS43MzZsMi45ODItLjIzN0w1My42My41ODljLjIxMy0uNTE1LjU1Ny0uNTIzLjc3NCAwbDEuMTQ2IDIuNzYzIDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2bC0yLjI3NCAxLjk0NC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6bS00OCAwTDMuNDY1IDkuNjMzYy0uNDc2LjI5MS0uNzU4LjA5Ni0uNjI2LS40NTVsLjY5Ni0yLjkwOS0yLjI3My0xLjk0NGMtLjQyNC0uMzYyLS4zMjUtLjY5MS4yMzktLjczNmwyLjk4Mi0uMjM3TDUuNjMuNTg5Yy4yMTMtLjUxNS41NTctLjUyMy43NzQgMEw3LjU1IDMuMzUybDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2TDguNDk3IDYuMjY5bC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6bTEyIDBsLTIuNTUyIDEuNTYxYy0uNDc2LjI5MS0uNzU4LjA5Ni0uNjI2LS40NTVsLjY5Ni0yLjkwOS0yLjI3My0xLjk0NGMtLjQyNC0uMzYyLS4zMjUtLjY5MS4yMzktLjczNmwyLjk4Mi0uMjM3TDE3LjYzLjU4OWMuMjEzLS41MTUuNTU3LS41MjMuNzc0IDBsMS4xNDYgMi43NjMgMi45ODIuMjM3Yy41NTYuMDQ0LjY3LjM2OC4yNC43MzZsLTIuMjc0IDEuOTQ0LjY5NiAyLjkxYy4xMy41NDItLjE0My43NS0uNjI2LjQ1NGwtMi41NTEtMS41NnptMTIgMGwtMi41NTIgMS41NjFjLS40NzYuMjkxLS43NTguMDk2LS42MjYtLjQ1NWwuNjk2LTIuOTA5LTIuMjczLTEuOTQ0Yy0uNDI0LS4zNjItLjMyNS0uNjkxLjIzOS0uNzM2bDIuOTgyLS4yMzdMMjkuNjMuNTg5Yy4yMTMtLjUxNS41NTctLjUyMy43NzQgMGwxLjE0NiAyLjc2MyAyLjk4Mi4yMzdjLjU1Ni4wNDQuNjcuMzY4LjI0LjczNmwtMi4yNzQgMS45NDQuNjk2IDIuOTFjLjEzLjU0Mi0uMTQzLjc1LS42MjYuNDU0bC0yLjU1MS0xLjU2em0xMiAwbC0yLjU1MiAxLjU2MWMtLjQ3Ni4yOTEtLjc1OC4wOTYtLjYyNi0uNDU1bC42OTYtMi45MDktMi4yNzMtMS45NDRjLS40MjQtLjM2Mi0uMzI1LS42OTEuMjM5LS43MzZsMi45ODItLjIzN0w0MS42My41ODljLjIxMy0uNTE1LjU1Ny0uNTIzLjc3NCAwbDEuMTQ2IDIuNzYzIDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2bC0yLjI3NCAxLjk0NC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6IiBmaWxsPSJ1cmwoI2EpIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=" alt="">
+                    <a href="#">4.7</a>
+                    <a href="#">月售3998单</a>
+                    <img src="./img/images/images/images/fengniao_03.png" alt="">
+                </div>
+                <div class="center_three flex">
+                    <a href="#">￥20起送</a>
+                    <span></span>
+                    <a href="#">配送费￥4.5</a>
+                    <a href="#">2.00KM</a>
+                    <span></span>
+                    <a href="#">32KM</a>
+                </div>
+                <div class="center_four">
+                    <span>奶茶</span>
+                    <span>品质联盟</span>
+                    <img src="https://fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!20x20r/gravity/Center/crop/20x20/" alt="">
+                    <a href="#">口碑人气好店</a>
+                </div>
+                <div class="center_five">
+                    <span>减</span>
+                    <a href="#">满69减15 , 满90减30</a>
+                    <a href="#">5个活动</a>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSIjOTk5IiBkPSJNNC41NzcgNS40MjNjLjc5Ljc3IDIuMDczLjc2NyAyLjg1NyAwbDQuMTItNC4wMjZDMTIuMzQ1LjYyNSAxMi4wOSAwIDEwLjk4NSAwSDEuMDI3Qy0uMDc3IDAtLjMzLjYzLjQ1NyAxLjM5N2w0LjEyIDQuMDI2eiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+" alt="">
+                </div>
+            </div>
+        
+        </div>
+        </div>
+        <div class="big_box">
+        <div class=" commo flex">
+                <img src="https://fuss10.elemecdn.com/c/ab/81564a6d806cbc7c61878b19e17cejpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/" alt="">
+                <div class="center">
+                    <div class="center_one">
+                        <img src="./img/images/images/images/pingpai_03.png" alt="">
+                        <a href="#">1点点</a>
+                        <a href="#">( 石祥新天地店 )</a>
+                        <span>···</span>
+                    </div>
+                    <div class="center_two">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSIwJSIgeTE9IjUwJSIgeTI9IjUwJSIgaWQ9ImEiPjxzdG9wIHN0b3AtY29sb3I9IiNGRkRFMDAiIG9mZnNldD0iMCUiLz48c3RvcCBzdG9wLWNvbG9yPSIjRkZCMDAwIiBvZmZzZXQ9IjEwMCUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJNNTQuMDE3IDguMDcybC0yLjU1MiAxLjU2MWMtLjQ3Ni4yOTEtLjc1OC4wOTYtLjYyNi0uNDU1bC42OTYtMi45MDktMi4yNzMtMS45NDRjLS40MjQtLjM2Mi0uMzI1LS42OTEuMjM5LS43MzZsMi45ODItLjIzN0w1My42My41ODljLjIxMy0uNTE1LjU1Ny0uNTIzLjc3NCAwbDEuMTQ2IDIuNzYzIDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2bC0yLjI3NCAxLjk0NC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6bS00OCAwTDMuNDY1IDkuNjMzYy0uNDc2LjI5MS0uNzU4LjA5Ni0uNjI2LS40NTVsLjY5Ni0yLjkwOS0yLjI3My0xLjk0NGMtLjQyNC0uMzYyLS4zMjUtLjY5MS4yMzktLjczNmwyLjk4Mi0uMjM3TDUuNjMuNTg5Yy4yMTMtLjUxNS41NTctLjUyMy43NzQgMEw3LjU1IDMuMzUybDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2TDguNDk3IDYuMjY5bC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6bTEyIDBsLTIuNTUyIDEuNTYxYy0uNDc2LjI5MS0uNzU4LjA5Ni0uNjI2LS40NTVsLjY5Ni0yLjkwOS0yLjI3My0xLjk0NGMtLjQyNC0uMzYyLS4zMjUtLjY5MS4yMzktLjczNmwyLjk4Mi0uMjM3TDE3LjYzLjU4OWMuMjEzLS41MTUuNTU3LS41MjMuNzc0IDBsMS4xNDYgMi43NjMgMi45ODIuMjM3Yy41NTYuMDQ0LjY3LjM2OC4yNC43MzZsLTIuMjc0IDEuOTQ0LjY5NiAyLjkxYy4xMy41NDItLjE0My43NS0uNjI2LjQ1NGwtMi41NTEtMS41NnptMTIgMGwtMi41NTIgMS41NjFjLS40NzYuMjkxLS43NTguMDk2LS42MjYtLjQ1NWwuNjk2LTIuOTA5LTIuMjczLTEuOTQ0Yy0uNDI0LS4zNjItLjMyNS0uNjkxLjIzOS0uNzM2bDIuOTgyLS4yMzdMMjkuNjMuNTg5Yy4yMTMtLjUxNS41NTctLjUyMy43NzQgMGwxLjE0NiAyLjc2MyAyLjk4Mi4yMzdjLjU1Ni4wNDQuNjcuMzY4LjI0LjczNmwtMi4yNzQgMS45NDQuNjk2IDIuOTFjLjEzLjU0Mi0uMTQzLjc1LS42MjYuNDU0bC0yLjU1MS0xLjU2em0xMiAwbC0yLjU1MiAxLjU2MWMtLjQ3Ni4yOTEtLjc1OC4wOTYtLjYyNi0uNDU1bC42OTYtMi45MDktMi4yNzMtMS45NDRjLS40MjQtLjM2Mi0uMzI1LS42OTEuMjM5LS43MzZsMi45ODItLjIzN0w0MS42My41ODljLjIxMy0uNTE1LjU1Ny0uNTIzLjc3NCAwbDEuMTQ2IDIuNzYzIDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2bC0yLjI3NCAxLjk0NC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6IiBmaWxsPSJ1cmwoI2EpIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=" alt="">
+                        <a href="#">4.7</a>
+                        <a href="#">月售3998单</a>
+                        <img src="./img/images/images/images/fengniao_03.png" alt="">
+                    </div>
+                    <div class="center_three flex">
+                        <a href="#">￥20起送</a>
+                        <span></span>
+                        <a href="#">配送费￥4.5</a>
+                        <a href="#">2.00KM</a>
+                        <span></span>
+                        <a href="#">32KM</a>
+                    </div>
+                    <div class="center_four">
+                        <span>奶茶</span>
+                        <span>品质联盟</span>
+                        <img src="https://fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!20x20r/gravity/Center/crop/20x20/" alt="">
+                        <a href="#">口碑人气好店</a>
+                    </div>
+                    <div class="center_five">
+                        <span>减</span>
+                        <a href="#">满69减15 , 满90减30</a>
+                        <a href="#">5个活动</a>
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSIjOTk5IiBkPSJNNC41NzcgNS40MjNjLjc5Ljc3IDIuMDczLjc2NyAyLjg1NyAwbDQuMTItNC4wMjZDMTIuMzQ1LjYyNSAxMi4wOSAwIDEwLjk4NSAwSDEuMDI3Qy0uMDc3IDAtLjMzLjYzLjQ1NyAxLjM5N2w0LjEyIDQuMDI2eiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+" alt="">
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="big_box">
+                <div class=" commo flex">
+                        <img src="https://fuss10.elemecdn.com/c/ab/81564a6d806cbc7c61878b19e17cejpeg.jpeg?imageMogr/format/webp/thumbnail/!130x130r/gravity/Center/crop/130x130/" alt="">
+                        <div class="center">
+                            <div class="center_one">
+                                <img src="./img/images/images/images/pingpai_03.png" alt="">
+                                <a href="#">1点点</a>
+                                <a href="#">( 石祥新天地店 )</a>
+                                <span>···</span>
+                            </div>
+                            <div class="center_two">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSIwJSIgeTE9IjUwJSIgeTI9IjUwJSIgaWQ9ImEiPjxzdG9wIHN0b3AtY29sb3I9IiNGRkRFMDAiIG9mZnNldD0iMCUiLz48c3RvcCBzdG9wLWNvbG9yPSIjRkZCMDAwIiBvZmZzZXQ9IjEwMCUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJNNTQuMDE3IDguMDcybC0yLjU1MiAxLjU2MWMtLjQ3Ni4yOTEtLjc1OC4wOTYtLjYyNi0uNDU1bC42OTYtMi45MDktMi4yNzMtMS45NDRjLS40MjQtLjM2Mi0uMzI1LS42OTEuMjM5LS43MzZsMi45ODItLjIzN0w1My42My41ODljLjIxMy0uNTE1LjU1Ny0uNTIzLjc3NCAwbDEuMTQ2IDIuNzYzIDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2bC0yLjI3NCAxLjk0NC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6bS00OCAwTDMuNDY1IDkuNjMzYy0uNDc2LjI5MS0uNzU4LjA5Ni0uNjI2LS40NTVsLjY5Ni0yLjkwOS0yLjI3My0xLjk0NGMtLjQyNC0uMzYyLS4zMjUtLjY5MS4yMzktLjczNmwyLjk4Mi0uMjM3TDUuNjMuNTg5Yy4yMTMtLjUxNS41NTctLjUyMy43NzQgMEw3LjU1IDMuMzUybDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2TDguNDk3IDYuMjY5bC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6bTEyIDBsLTIuNTUyIDEuNTYxYy0uNDc2LjI5MS0uNzU4LjA5Ni0uNjI2LS40NTVsLjY5Ni0yLjkwOS0yLjI3My0xLjk0NGMtLjQyNC0uMzYyLS4zMjUtLjY5MS4yMzktLjczNmwyLjk4Mi0uMjM3TDE3LjYzLjU4OWMuMjEzLS41MTUuNTU3LS41MjMuNzc0IDBsMS4xNDYgMi43NjMgMi45ODIuMjM3Yy41NTYuMDQ0LjY3LjM2OC4yNC43MzZsLTIuMjc0IDEuOTQ0LjY5NiAyLjkxYy4xMy41NDItLjE0My43NS0uNjI2LjQ1NGwtMi41NTEtMS41NnptMTIgMGwtMi41NTIgMS41NjFjLS40NzYuMjkxLS43NTguMDk2LS42MjYtLjQ1NWwuNjk2LTIuOTA5LTIuMjczLTEuOTQ0Yy0uNDI0LS4zNjItLjMyNS0uNjkxLjIzOS0uNzM2bDIuOTgyLS4yMzdMMjkuNjMuNTg5Yy4yMTMtLjUxNS41NTctLjUyMy43NzQgMGwxLjE0NiAyLjc2MyAyLjk4Mi4yMzdjLjU1Ni4wNDQuNjcuMzY4LjI0LjczNmwtMi4yNzQgMS45NDQuNjk2IDIuOTFjLjEzLjU0Mi0uMTQzLjc1LS42MjYuNDU0bC0yLjU1MS0xLjU2em0xMiAwbC0yLjU1MiAxLjU2MWMtLjQ3Ni4yOTEtLjc1OC4wOTYtLjYyNi0uNDU1bC42OTYtMi45MDktMi4yNzMtMS45NDRjLS40MjQtLjM2Mi0uMzI1LS42OTEuMjM5LS43MzZsMi45ODItLjIzN0w0MS42My41ODljLjIxMy0uNTE1LjU1Ny0uNTIzLjc3NCAwbDEuMTQ2IDIuNzYzIDIuOTgyLjIzN2MuNTU2LjA0NC42Ny4zNjguMjQuNzM2bC0yLjI3NCAxLjk0NC42OTYgMi45MWMuMTMuNTQyLS4xNDMuNzUtLjYyNi40NTRsLTIuNTUxLTEuNTZ6IiBmaWxsPSJ1cmwoI2EpIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=" alt="">
+                                <a href="#">4.7</a>
+                                <a href="#">月售3998单</a>
+                                <img src="./img/images/images/images/fengniao_03.png" alt="">
+                            </div>
+                            <div class="center_three flex">
+                                <a href="#">￥20起送</a>
+                                <span></span>
+                                <a href="#">配送费￥4.5</a>
+                                <a href="#">2.00KM</a>
+                                <span></span>
+                                <a href="#">32KM</a>
+                            </div>
+                            <div class="center_four">
+                                <span>奶茶</span>
+                                <span>品质联盟</span>
+                                <img src="https://fuss10.elemecdn.com/a/c1/24c767ffa7fd296d3e2d6f01798c6png.png?imageMogr/format/webp/thumbnail/!20x20r/gravity/Center/crop/20x20/" alt="">
+                                <a href="#">口碑人气好店</a>
+                            </div>
+                            <div class="center_five">
+                                <span>减</span>
+                                <a href="#">满69减15 , 满90减30</a>
+                                <a href="#">5个活动</a>
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSIjOTk5IiBkPSJNNC41NzcgNS40MjNjLjc5Ljc3IDIuMDczLjc2NyAyLjg1NyAwbDQuMTItNC4wMjZDMTIuMzQ1LjYyNSAxMi4wOSAwIDEwLjk4NSAwSDEuMDI3Qy0uMDc3IDAtLjMzLjYzLjQ1NyAxLjM5N2w0LjEyIDQuMDI2eiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+" alt="">
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="bottom_uzi flex">
+                    <div class="bottom">
+                        <img src="./img/images/images/images/elema_03.png" alt="">
+                        <div><a href="./2.html">首页</a></div>
+                    </div>
+                    <div class="bottom">
+                            <img src="./img/images/images/images/daohan_03.png" alt="">
+                            <div><a href="#">发现</a></div>
+                        </div>
+                        <div class="bottom">
+                                <img src="./img/images/images/images/bot3_03.png" alt="">
+                                <div><a href="./4.html">订单</a></div>
+                            </div>
+                            <div class="bottom">
+                                    <img src="./img/images/images/images/renren_03.png" alt="">
+                                    <div><a href="./3.html">我的</a></div>
+                                </div>
+                    
+                </div>
+</body>
+</html>
